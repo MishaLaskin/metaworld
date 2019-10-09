@@ -132,6 +132,9 @@ class SawyerReachPushPickPlaceEnv(SawyerXYZEnv):
     def model_name(self):
         return get_asset_full_path('sawyer_xyz/sawyer_reach_push_pick_and_place.xml')
 
+    def set_goal(self,goal):
+        return self._state_goal
+
     def step(self, action):
         if self.rotMode == 'euler':
             action_ = np.zeros(7)
@@ -355,7 +358,9 @@ class SawyerReachPushPickPlaceEnv(SawyerXYZEnv):
             reachRew = c1*(self.maxReachDist - reachDist) + c1*(np.exp(-(reachDist**2)/c2) + np.exp(-(reachDist**2)/c3))
             reachRew = max(reachRew, 0)
             # reachNearRew = max(reachNearRew,0)
-            # reachRew = -reachDist
+
+            # comment if you want a sparse reward
+            reachRew = -reachDist
             reward = reachRew# + reachNearRew
             return [reward, reachRew, reachDist, None, None, None, None, None]
 

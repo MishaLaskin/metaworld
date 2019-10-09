@@ -16,12 +16,765 @@ def register_custom_envs():
     LOGGER.info("Registering metaworld mujoco gym environments")
 
     """
+    1. Basketball
+    """
+    def create_state_sawyer_basketball_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_basketball import SawyerBasketballEnv
+        env = SawyerBasketballEnv()
+        return env
+
+    register(
+        id='SawyerBasketballEnv-v1',
+        entry_point=create_state_sawyer_basketball_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    2. Bin picking
+    """
+    def create_state_sawyer_binpicking_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_bin_picking import SawyerBinPickingEnv
+        env = SawyerBinPickingEnv()
+        return env
+
+    register(
+        id='SawyerBinPickingEnv-v1',
+        entry_point=create_state_sawyer_binpicking_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+    
+    """
+    3. Box close
+    """
+    def create_state_sawyer_boxclose_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_box_close import SawyerBoxCloseEnv
+        env = SawyerBoxCloseEnv()
+        return env
+
+    register(
+        id='SawyerBoxCloseEnv-v1',
+        entry_point=create_state_sawyer_boxclose_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+    
+    """
+    4. Button press topdown
+    """
+    def create_state_sawyer_buttonpresstopdown_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_button_press_topdown import SawyerButtonPressTopdownEnv
+        env = SawyerButtonPressTopdownEnv()
+        return env
+
+    register(
+        id='SawyerButtonPressTopdownEnv-v1',
+        entry_point=create_state_sawyer_buttonpresstopdown_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+    """
+    5. Button press topdown wall
+    """
+    def create_state_sawyer_buttonpresstopdownwall_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_button_press_topdown_wall import SawyerButtonPressTopdownWallEnv
+        env = SawyerButtonPressTopdownWallEnv()
+        return env
+
+    register(
+        id='SawyerButtonPressTopdownWallEnv-v1',
+        entry_point=create_state_sawyer_buttonpresstopdownwall_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    6. Button press wall
+    """
+    def create_state_sawyer_buttonpresswall_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_button_press_wall import SawyerButtonPressWallEnv
+        env = SawyerButtonPressWallEnv()
+        return env
+
+    register(
+        id='SawyerButtonPressWallEnv-v1',
+        entry_point=create_state_sawyer_buttonpresswall_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    7. Button press 
+    """
+    def create_state_sawyer_buttonpress_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_button_press import SawyerButtonPressEnv
+        env = SawyerButtonPressEnv()
+        return env
+
+    register(
+        id='SawyerButtonPressEnv-v1',
+        entry_point=create_state_sawyer_buttonpress_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    8. Coffee button  
+    """
+    def create_state_sawyer_coffeebutton_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_coffee_button import SawyerCoffeeButtonEnv
+        env = SawyerCoffeeButtonEnv()
+        return env
+
+    register(
+        id='SawyerCoffeeButtonEnv-v1',
+        entry_point=create_state_sawyer_coffeebutton_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    9. Coffee pull  
+    """
+    def create_state_sawyer_coffeepull_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_coffee_pull import SawyerCoffeePullEnv
+        env = SawyerCoffeePullEnv()
+        return env
+
+    register(
+        id='SawyerCoffeePullEnv-v1',
+        entry_point=create_state_sawyer_coffeepull_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    10. Coffee push  
+    """
+    def create_state_sawyer_coffeepush_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_coffee_push import SawyerCoffeePushEnv
+        env = SawyerCoffeePushEnv()
+        return env
+
+    register(
+        id='SawyerCoffeePushEnv-v1',
+        entry_point=create_state_sawyer_coffeepush_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+
+    """
+    11. Dial turn 
+    """
+    def create_state_sawyer_dial_turn_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_dial_turn import SawyerDialTurnEnv
+        env = SawyerDialTurnEnv()
+        return env
+
+    register(
+        id='SawyerDialTurnEnv-v1',
+        entry_point=create_state_sawyer_dial_turn_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    12. Disassemble peg 
+    """
+    def create_state_sawyer_disassemble_peg_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_disassemble_peg import SawyerNutDisassembleEnv
+        env = SawyerNutDisassembleEnv()
+        return env
+
+    register(
+        id='SawyerNutDisassembleEnv-v1',
+        entry_point=create_state_sawyer_disassemble_peg_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+    """
+    13. Close door
+    """
+    def create_state_sawyer_door_close_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_door_close import SawyerDoorCloseEnv
+        env = SawyerDoorCloseEnv()
+        return env
+
+    register(
+        id='SawyerDoorCloseEnv-v1',
+        entry_point=create_state_sawyer_door_close_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+    """
+    14. Lock door
+    """
+    def create_state_sawyer_door_lock_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_door_lock import SawyerDoorLockEnv
+        env = SawyerDoorLockEnv()
+        return env
+
+    register(
+        id='SawyerDoorLockEnv-v1',
+        entry_point=create_state_sawyer_door_lock_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    15. Unlock door
+    """
+    def create_state_sawyer_door_unlock_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_door_unlock import SawyerDoorUnlockEnv
+        env = SawyerDoorUnlockEnv()
+        return env
+
+    register(
+        id='SawyerDoorUnlockEnv-v1',
+        entry_point=create_state_sawyer_door_unlock_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    16. Door
+    """
+    def create_state_sawyer_door_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_door import SawyerDoorEnv
+        env = SawyerDoorEnv()
+        return env
+
+    register(
+        id='SawyerDoorEnv-v1',
+        entry_point=create_state_sawyer_door_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    17. Drawer Close
+    """
+    def create_state_sawyer_drawer_close_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_drawer_close import SawyerDrawerCloseEnv
+        env = SawyerDrawerCloseEnv()
+        return env
+
+    register(
+        id='SawyerDrawerCloseEnv-v1',
+        entry_point=create_state_sawyer_drawer_close_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    18. Drawer Open
+    """
+    def create_state_sawyer_drawer_open_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_drawer_open import SawyerDrawerOpenEnv
+        env = SawyerDrawerOpenEnv()
+        return env
+
+    register(
+        id='SawyerDrawerOpenEnv-v1',
+        entry_point=create_state_sawyer_drawer_open_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    19. Faucet Open
+    """
+    def create_state_sawyer_faucet_open_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_faucet_open import SawyerFaucetOpenEnv
+        env = SawyerFaucetOpenEnv()
+        return env
+
+    register(
+        id='SawyerFaucetOpenEnv-v1',
+        entry_point=create_state_sawyer_faucet_open_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    20. Faucet Close
+    """
+    def create_state_sawyer_faucet_close_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_faucet_close import SawyerFaucetCloseEnv
+        env = SawyerFaucetCloseEnv()
+        return env
+
+    register(
+        id='SawyerFaucetCloseEnv-v1',
+        entry_point=create_state_sawyer_faucet_close_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    21. Hammer
+    """
+    def create_state_sawyer_hammer_env_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_hammer import SawyerHammerEnv
+        env = SawyerHammerEnv()
+        return env
+
+    register(
+        id='SawyerHammerEnv-v1',
+        entry_point=create_state_sawyer_hammer_env_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+    """
+    22. Hand insert
+    """
+    def create_state_sawyer_hand_insert_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_hand_insert import SawyerHandInsertEnv
+        env = SawyerHandInsertEnv()
+        return env
+
+    register(
+        id='SawyerHandInsertEnv-v1',
+        entry_point=create_state_sawyer_hand_insert_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    23. Handle press side
+    """
+    def create_state_sawyer_handle_press_side_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_handle_press_side import SawyerHandlePressSideEnv
+        env = SawyerHandlePressSideEnv()
+        return env
+
+    register(
+        id='SawyerHandlePressSideEnv-v1',
+        entry_point=create_state_sawyer_handle_press_side_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+
+    """
+    24. Handle press 
+    """
+    def create_state_sawyer_handle_press_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_handle_press import SawyerHandlePressEnv
+        env = SawyerHandlePressEnv()
+        return env
+
+    register(
+        id='SawyerHandlePressEnv-v1',
+        entry_point=create_state_sawyer_handle_press_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+
+    """
+    25. Handle pull side 
+    """
+    def create_state_sawyer_handle_pull_side_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_handle_pull_side import SawyerHandlePullSideEnv
+        env = SawyerHandlePullSideEnv()
+        return env
+
+    register(
+        id='SawyerHandlePullSideEnv-v1',
+        entry_point=create_state_sawyer_handle_pull_side_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    26. Handle pull  
+    """
+    def create_state_sawyer_handle_pull_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_handle_pull import SawyerHandlePullEnv
+        env = SawyerHandlePullEnv()
+        return env
+
+    register(
+        id='SawyerHandlePullEnv-v1',
+        entry_point=create_state_sawyer_handle_pull_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    27. Lever pull  
+    """
+    def create_state_sawyer_lever_pull_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_lever_pull import SawyerLeverPullEnv
+        env = SawyerLeverPullEnv()
+        return env
+
+    register(
+        id='SawyerLeverPullEnv-v1',
+        entry_point=create_state_sawyer_lever_pull_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    28. Peg insertion side
+    """
+    def create_state_sawyer_peg_insertion_side_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_peg_insertion_side import SawyerPegInsertionSideEnv
+        env = SawyerPegInsertionSideEnv()
+        return env
+
+    register(
+        id='SawyerPegInsertionSideEnv-v1',
+        entry_point=create_state_sawyer_peg_insertion_side_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    29. Peg unplug side
+    """
+    def create_state_sawyer_peg_unplug_side_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_peg_unplug_side import SawyerPegUnplugSideEnv
+        env = SawyerPegUnplugSideEnv()
+        return env
+
+    register(
+        id='SawyerPegUnplugSideEnv-v1',
+        entry_point=create_state_sawyer_peg_unplug_side_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    30. Pick and place wsg
+    """
+    def create_state_sawyer_pick_and_place_wsg_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_pick_and_place_wsg import SawyerPickAndPlaceWsgEnv
+        env = SawyerPickAndPlaceWsgEnv()
+        return env
+
+    register(
+        id='SawyerPickAndPlaceWsgEnv-v1',
+        entry_point=create_state_sawyer_pick_and_place_wsg_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    31. Pick and place
+    """
+    def create_state_sawyer_pick_and_place_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_pick_and_place import SawyerPickAndPlaceEnv
+        env = SawyerPickAndPlaceEnv()
+        return env
+
+    register(
+        id='SawyerPickAndPlaceEnv-v1',
+        entry_point=create_state_sawyer_pick_and_place_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+
+    """
+    31. Pick out of hole 
+    """
+    def create_state_sawyer_pick_out_of_hole_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_pick_out_of_hole import SawyerPickOutOfHoleEnv
+        env = SawyerPickOutOfHoleEnv()
+        return env
+
+    register(
+        id='SawyerPickOutOfHoleEnv-v1',
+        entry_point=create_state_sawyer_pick_out_of_hole_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    32. Plate slide back side
+    """
+    def create_state_sawyer_plate_slide_back_side_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_plate_slide_back_side import SawyerPlateSlideBackSideEnv
+        env = SawyerPlateSlideBackSideEnv()
+        return env
+
+    register(
+        id='SawyerPlateSlideBackSideEnv-v1',
+        entry_point=create_state_sawyer_plate_slide_back_side_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+
+    """
+    33. Plate slide back 
+    """
+    def create_state_sawyer_plate_slide_back_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_plate_slide_back import SawyerPlateSlideBackEnv
+        env = SawyerPlateSlideBackEnv()
+        return env
+
+    register(
+        id='SawyerPlateSlideBackEnv-v1',
+        entry_point=create_state_sawyer_plate_slide_back_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+    """
+    34. Plate slide side 
+    """
+    def create_state_sawyer_plate_slide_side_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_plate_slide_side import SawyerPlateSlideSideEnv
+        env = SawyerPlateSlideSideEnv()
+        return env
+
+    register(
+        id='SawyerPlateSlideSideEnv-v1',
+        entry_point=create_state_sawyer_plate_slide_side_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+    """
+    35. Plate slide  
+    """
+    def create_state_sawyer_plate_slide_v1(*args,**kwargs):
+        from metaworld.envs.mujoco.sawyer_xyz.sawyer_plate_slide import SawyerPlateSlideEnv
+        env = SawyerPlateSlideEnv()
+        return env
+
+    register(
+        id='SawyerPlateSlideEnv-v1',
+        entry_point=create_state_sawyer_plate_slide_v1,
+        tags={
+            'git-commit-hash': 'none',
+            'author': 'misha'
+        },
+        kwargs={
+            'hide_goal_markers': True,
+            'norm_order': 2,
+        },
+    )
+    """
     Reaching tasks
     """
 
     register(
         id='SawyerReachXYEnv-v1',
-        entry_point='metaworld.envs.mujoco.sawyer_xyz.sawyer_reach:SawyerReachXYEnv',
+        entry_point=create_state_sawyer_reach_xy_env_v1,
         tags={
             'git-commit-hash': '2d95c75',
             'author': 'murtaza'
@@ -381,14 +1134,25 @@ def create_image_48_sawyer_shelf_xy_env_v1(**kwargs):
     )
 
 
+
+
+def create_state_sawyer_reach_xy_env_v1(*args,**kwargs):
+    from metaworld.envs.mujoco.cameras import sawyer_xyz_reacher_camera_v0
+    from metaworld.envs.mujoco.sawyer_xyz import SawyerReachPushPickPlaceEnv
+
+    env = SawyerReachPushPickPlaceEnv(task_type='reach')
+    return env
+
+
 def create_image_48_sawyer_reach_xy_env_v1():
     from metaworld.core.image_env import ImageEnv
     from metaworld.envs.mujoco.cameras import sawyer_xyz_reacher_camera_v0
+    from metaworld.envs.mujoco.sawyer_xyz import SawyerReachPushPickPlaceEnv
 
-    wrapped_env = gym.make('SawyerReachXYEnv-v1')
+    wrapped_env = SawyerReachPushPickPlaceEnv(task_type='reach')
     return ImageEnv(
         wrapped_env,
-        48,
+        imsize=48,
         init_camera=sawyer_xyz_reacher_camera_v0,
         transpose=True,
         normalize=True,
